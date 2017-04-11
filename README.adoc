@@ -55,18 +55,6 @@ $ gradle test
 +
 By virtue of the fact that these tests pass, we know that the `microservices-pact-consumer` app interacts appropriately with the contract as defined in link:microservices-pact-consumer/src/test/java/io/pivotal/microservices/pact/consumer/ConsumerPortTest.java[ConsumerPortTest.java].
 
-. Next, we want to verify that the `microservices-pact-provider` app actually provides the expected contract. First, build the apps:
-+
-----
-$ gradle assemble
-----
-
-. Next, in one terminal window, start up the provider app:
-+
-----
-$ java -jar microservices-pact-provider/build/libs/microservices-pact-provider-0.0.1-SNAPSHOT.jar
-----
-
 . Then, in another terminal window, run the pact verification:
 +
 ----
